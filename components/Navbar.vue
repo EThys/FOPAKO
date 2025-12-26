@@ -26,7 +26,7 @@
 
         <!-- Desktop Button - Right -->
         <div class="hidden lg:flex">
-          <button class="px-7 py-3.5 bg-brand-700 text-white font-[800] text-[12px] hover:bg-brand-800 transition-all rounded-[3px] shadow-sm uppercase tracking-[0.1em]">
+          <button @click="showSupportModal = true" class="px-7 py-3.5 bg-brand-700 text-white font-[800] text-[12px] hover:bg-brand-800 transition-all rounded-[3px] shadow-sm uppercase tracking-[0.1em]">
             Soutenir l'Action
           </button>
         </div>
@@ -61,17 +61,24 @@
           <nuxt-link to="/news" @click="isOpen = false" class="block text-[18px] font-[900] text-[#1a1a1b] hover:text-brand-700 uppercase tracking-widest">Actualités</nuxt-link>
           <nuxt-link to="/contact" @click="isOpen = false" class="block text-[18px] font-[900] text-[#1a1a1b] hover:text-brand-700 uppercase tracking-widest">Contact</nuxt-link>
           <div class="pt-6 border-t border-gray-100">
-            <button class="w-full bg-brand-700 text-white py-5 font-[900] text-[14px] shadow-xl uppercase tracking-[0.1em] rounded-[2px]">
+            <button @click="showSupportModal = true; isOpen = false" class="w-full bg-brand-700 text-white py-5 font-[900] text-[14px] shadow-xl uppercase tracking-[0.1em] rounded-[2px]">
               Soutenir l'Action
             </button>
           </div>
         </div>
       </div>
     </transition>
+
+    <!-- Modals -->
+    <SupportModal v-model="showSupportModal" />
+    <MemberModal v-model="showMemberModal" />
   </nav>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+
 const isOpen = ref(false)
+const showSupportModal = ref(false)
+const showMemberModal = ref(false)
 </script>
