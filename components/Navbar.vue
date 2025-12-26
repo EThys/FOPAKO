@@ -18,12 +18,10 @@
         <div class="hidden lg:flex items-center space-x-10">
           <nuxt-link to="/" class="text-[14px] font-[800] text-[#1a1a1b] hover:text-brand-700 transition-colors uppercase tracking-widest">Accueil</nuxt-link>
           <nuxt-link to="/about" class="text-[14px] font-[800] text-[#1a1a1b] hover:text-brand-700 transition-colors uppercase tracking-widest">À Propos</nuxt-link>
-          <div class="group relative">
-            <a href="/#services" class="text-[14px] font-[800] text-[#1a1a1b] hover:text-brand-700 transition-colors uppercase tracking-widest flex items-center gap-1">Services <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg></a>
-          </div>
-          <div class="group relative">
-            <a href="/#blog" class="text-[14px] font-[800] text-[#1a1a1b] hover:text-brand-700 transition-colors uppercase tracking-widest flex items-center gap-1">Blog <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg></a>
-          </div>
+          <a href="/#services" class="text-[14px] font-[800] text-[#1a1a1b] hover:text-brand-700 transition-colors uppercase tracking-widest">Services</a>
+          <nuxt-link to="/blog" class="text-[14px] font-[800] text-[#1a1a1b] hover:text-brand-700 transition-colors uppercase tracking-widest">Blog</nuxt-link>
+          <nuxt-link to="/news" class="text-[14px] font-[800] text-[#1a1a1b] hover:text-brand-700 transition-colors uppercase tracking-widest">Actualités</nuxt-link>
+          <nuxt-link to="/contact" class="text-[14px] font-[800] text-[#1a1a1b] hover:text-brand-700 transition-colors uppercase tracking-widest">Contact</nuxt-link>
         </div>
 
         <!-- Desktop Button - Right -->
@@ -59,7 +57,9 @@
           <nuxt-link to="/" @click="isOpen = false" class="block text-[18px] font-[900] text-[#1a1a1b] hover:text-brand-700 uppercase tracking-widest">Accueil</nuxt-link>
           <nuxt-link to="/about" @click="isOpen = false" class="block text-[18px] font-[900] text-[#1a1a1b] hover:text-brand-700 uppercase tracking-widest">À propos</nuxt-link>
           <a href="/#services" @click="isOpen = false" class="block text-[18px] font-[900] text-[#1a1a1b] hover:text-brand-700 uppercase tracking-widest">Services</a>
-          <a href="/#blog" @click="isOpen = false" class="block text-[18px] font-[900] text-[#1a1a1b] hover:text-brand-700 uppercase tracking-widest">Blog</a>
+          <nuxt-link to="/blog" @click="isOpen = false" class="block text-[18px] font-[900] text-[#1a1a1b] hover:text-brand-700 uppercase tracking-widest">Blog</nuxt-link>
+          <nuxt-link to="/news" @click="isOpen = false" class="block text-[18px] font-[900] text-[#1a1a1b] hover:text-brand-700 uppercase tracking-widest">Actualités</nuxt-link>
+          <nuxt-link to="/contact" @click="isOpen = false" class="block text-[18px] font-[900] text-[#1a1a1b] hover:text-brand-700 uppercase tracking-widest">Contact</nuxt-link>
           <div class="pt-6 border-t border-gray-100">
             <button class="w-full bg-brand-700 text-white py-5 font-[900] text-[14px] shadow-xl uppercase tracking-[0.1em] rounded-[2px]">
               Soutenir l'Action
