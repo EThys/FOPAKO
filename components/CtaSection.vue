@@ -16,20 +16,28 @@
         </p>
         
         <div class="flex flex-col sm:flex-row gap-6 justify-center">
-          <button class="px-12 py-5 bg-brand-700 text-white font-[900] text-[14px] tracking-[0.1em] hover:bg-brand-800 transition-all shadow-2xl uppercase rounded-[2px]">
+          <button @click="showMemberModal = true" class="px-12 py-5 bg-brand-700 text-white font-[900] text-[14px] tracking-[0.1em] hover:bg-brand-800 transition-all shadow-2xl uppercase rounded-[2px]">
             Devenir Membre
           </button>
-          <button class="px-12 py-5 bg-white text-brand-900 font-[900] text-[14px] tracking-[0.1em] hover:bg-gray-100 transition-all shadow-2xl uppercase rounded-[2px]">
+          <button @click="showSupportModal = true" class="px-12 py-5 bg-white text-brand-900 font-[900] text-[14px] tracking-[0.1em] hover:bg-gray-100 transition-all shadow-2xl uppercase rounded-[2px]">
             Soutenir l'Action
           </button>
         </div>
       </div>
     </div>
+
+    <!-- Modals -->
+    <SupportModal v-model="showSupportModal" />
+    <MemberModal v-model="showMemberModal" />
   </section>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import { useScrollObserver } from '~/composables/useScrollObserver'
 
 useScrollObserver()
+
+const showSupportModal = ref(false)
+const showMemberModal = ref(false)
 </script>
